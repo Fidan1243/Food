@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebApplication3.Entities.Drink>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Drinks</title>
+    <link rel="stylesheet" href="~/css/site.css"/>
+</head>
+<body>
+    <div class="containerr">
+
+		@foreach (var item in Model)
+		{
+			<div>
+
+				<img src="~/images/@item.PhotoShortPath" />
+				<p>@item.Name - @item.Price</p>
+			</div>
+		}
+	</div>
+</body>
+</html>
